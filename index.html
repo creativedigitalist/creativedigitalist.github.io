@@ -4,167 +4,86 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Creative Digitalist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --accent-color: linear-gradient(90deg, #b300b3, #ff3399); /* purple-pink mix */
-      --accent-text: #b300b3;
-    }
-
     body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
       background-color: #ffffff;
       color: #000000;
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
     }
 
-    /* Header section */
     header {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 25px 70px;
-      background-color: #fff;
-      border-bottom: 1px solid #eee;
+      justify-content: space-between;
+      padding: 20px 60px;
+      background-color: #ffffff;
+      border-bottom: 2px solid #f1f1f1;
     }
 
     .logo-container {
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 20px;
     }
 
-    .logo {
-      width: 85px;
-      height: 85px;
-      object-fit: contain;
+    .logo-container img {
+      width: 120px; /* doubled size */
+      height: auto;
     }
 
     .brand-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.4rem;
-      font-weight: 700;
-      background: var(--accent-color);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-family: 'Pacifico', cursive;
+      font-size: 2.8rem;
+      color: #000000;
       letter-spacing: 1px;
     }
 
-    nav {
+    .dot-pink {
+      color: #ff1493;
+    }
+
+    .cross-purple {
+      color: #800080;
+    }
+
+    nav ul {
       display: flex;
-      gap: 45px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 30px;
     }
 
-    nav a {
+    nav ul li a {
       text-decoration: none;
-      font-weight: 400;
-      font-size: 1.05rem;
-      letter-spacing: 0.5px;
-      transition: all 0.2s ease-in-out;
-      background: var(--accent-color);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    nav a:hover {
-      opacity: 0.8;
-    }
-
-    /* Hero section */
-    .hero {
-      text-align: center;
-      padding: 140px 20px;
-    }
-
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      color: #000;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 1.3rem;
-      color: #444;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 50px 20px;
-      background-color: #f9f9f9;
-      border-top: 1px solid #eee;
-      color: #555;
-      font-size: 0.95rem;
-    }
-
-    footer a {
-      background: var(--accent-color);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-decoration: none;
+      color: #000000;
       font-weight: 500;
+      transition: color 0.3s ease;
     }
 
-    footer a:hover {
-      opacity: 0.8;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        gap: 20px;
-        padding: 25px;
-      }
-
-      nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 25px;
-      }
-
-      .brand-name {
-        font-size: 2rem;
-      }
-
-      .logo {
-        width: 70px;
-        height: 70px;
-      }
-
-      .hero h1 {
-        font-size: 2.4rem;
-      }
+    nav ul li a:hover {
+      color: #ff1493; /* hot pink hover */
     }
   </style>
 </head>
-
 <body>
   <header>
     <div class="logo-container">
-      <img src="logo.png" alt="Creative Digitalist Logo" class="logo">
-      <span class="brand-name">Creative Digitalist</span>
+      <img src="logo.png" alt="Creative Digitalist Logo">
+      <h1 class="brand-name">
+        Cre<span class="dot-pink">a</span>tive D<span class="cross-purple">i</span>g<span class="dot-pink">i</span>tal<span class="cross-purple">i</span>st
+      </h1>
     </div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Products & Services</a>
-      <a href="#">Projects Portfolio</a>
-      <a href="#">Client Testimonials</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products & Services</a></li>
+        <li><a href="#">Projects Portfolio</a></li>
+        <li><a href="#">Client Testimonials</a></li>
+      </ul>
     </nav>
   </header>
-
-  <section class="hero">
-    <h1>Welcome to Creative Digitalist</h1>
-    <p>Designing, analyzing, and transforming digital systems with creativity and clarity — bridging art, analytics, and innovation for meaningful digital evolution.</p>
-  </section>
-
-  <footer>
-    <p>Contact: <a href="mailto:yourname@email.com">yourname@email.com</a> | 
-    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></p>
-  </footer>
 </body>
 </html>
