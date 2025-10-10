@@ -54,7 +54,7 @@
       color: #000000;
       font-weight: 400;
       font-family: 'Pacifico', cursive;
-      font-size: 1.56rem; /* increased 1.3x from 1.2rem */
+      font-size: 1.56rem; /* increased 1.3x */
       transition: color 0.3s ease;
     }
 
@@ -70,23 +70,14 @@
       padding: 100px 20px;
       background-color: #f5f5f5;
       font-family: 'Pacifico', cursive;
-    }
-
-    #middle-section .container {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 20px;
-      max-width: 1200px;
-      justify-content: center;
-      text-align: center;
+      text-align: center; /* centers the content */
     }
 
     #middle-section h2 {
       font-weight: 700;
       font-size: 2.5rem;
       color: #222;
-      margin: 0;
+      margin: 0 0 20px 0; /* space below headline */
     }
 
     #middle-section p {
@@ -94,6 +85,7 @@
       font-size: 1.8rem;
       color: #555;
       margin: 0;
+      white-space: nowrap; /* keeps paragraph in one line */
     }
 
     /* Responsive adjustments */
@@ -107,6 +99,10 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 30px;
+      }
+
+      #middle-section p {
+        font-size: 1.5rem; /* slightly smaller on small screens to fit */
       }
     }
   </style>
@@ -130,7 +126,7 @@
 
   <!-- Middle Section -->
   <section id="middle-section">
-    <div class="container">
+    <div>
       <h2>— Launching Soon —</h2>
       <p>Shaping digital ecosystems through creativity and data-driven insights</p>
     </div>
