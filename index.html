@@ -6,6 +6,11 @@
   <title>Creative Digitalist</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --accent-color: linear-gradient(90deg, #b300b3, #ff3399); /* purple-pink mix */
+      --accent-text: #b300b3;
+    }
+
     body {
       background-color: #ffffff;
       color: #000000;
@@ -27,12 +32,12 @@
     .logo-container {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 18px;
     }
 
     .logo {
-      width: 70px;
-      height: 70px;
+      width: 85px;
+      height: 85px;
       object-fit: contain;
     }
 
@@ -40,7 +45,9 @@
       font-family: 'Playfair Display', serif;
       font-size: 2.4rem;
       font-weight: 700;
-      color: #d60073; /* darker hot pink */
+      background: var(--accent-color);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       letter-spacing: 1px;
     }
 
@@ -51,15 +58,17 @@
 
     nav a {
       text-decoration: none;
-      color: #d60073;
       font-weight: 400;
       font-size: 1.05rem;
       letter-spacing: 0.5px;
-      transition: color 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      background: var(--accent-color);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     nav a:hover {
-      color: #a80055;
+      opacity: 0.8;
     }
 
     /* Hero section */
@@ -94,13 +103,15 @@
     }
 
     footer a {
-      color: #d60073;
+      background: var(--accent-color);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       text-decoration: none;
       font-weight: 500;
     }
 
     footer a:hover {
-      color: #a80055;
+      opacity: 0.8;
     }
 
     @media (max-width: 768px) {
@@ -118,6 +129,11 @@
 
       .brand-name {
         font-size: 2rem;
+      }
+
+      .logo {
+        width: 70px;
+        height: 70px;
       }
 
       .hero h1 {
