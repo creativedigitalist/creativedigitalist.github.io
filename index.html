@@ -6,93 +6,135 @@
     <title>Creative Digitalist</title>
     <style>
         body {
-            background-color: #ffffff; /* changed to white */
-            color: #000000; /* changed to black */
+            margin: 0;
             font-family: 'Helvetica Neue', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        /* Header */
+        header {
+            background-color: #ffffff;
+            padding: 15px 30px;
+            border-bottom: 1px solid #ddd;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #FF69B4; /* hot pink */
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
             margin: 0;
             padding: 0;
         }
-        header {
-            padding: 50px 20px 20px 20px;
-            text-align: center;
+        nav li {
+            margin-left: 25px;
         }
-        header h1 {
+        nav a {
+            text-decoration: none;
+            color: #FF69B4; /* hot pink */
+            font-weight: 500;
+        }
+        nav a:hover {
+            color: #FF1493; /* deeper pink on hover */
+        }
+
+        /* Intro / Hero */
+        .hero {
+            text-align: center;
+            padding: 150px 20px;
+        }
+        .hero h1 {
             font-size: 3rem;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
-        header p {
-            color: #333; /* darker grey for tagline */
+        .hero p {
             font-size: 1.2rem;
+            color: #333333;
         }
-        section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .projects {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-        }
-        .project-card {
-            background-color: #f2f2f2; /* light grey card background */
-            padding: 20px;
-            width: 250px;
-            border-radius: 10px;
-        }
-        .project-card h3 {
-            margin-top: 0;
-            color: #000;
-        }
-        .project-card p {
-            color: #333;
-            font-size: 0.95rem;
-        }
+
+        /* Footer */
         footer {
             padding: 30px 20px;
             text-align: center;
-            color: #555;
+            color: #555555;
+            border-top: 1px solid #ddd;
         }
-        a {
-            color: #000;
+        footer a {
+            color: #000000;
             text-decoration: none;
+            font-weight: 500;
         }
-        a:hover {
-            color: #555;
+        footer a:hover {
+            color: #555555;
         }
-        @media(max-width: 768px){
-            .projects {
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
                 flex-direction: column;
-                align-items: center;
+                align-items: flex-start;
+            }
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+            nav li {
+                margin: 10px 0;
+            }
+            .hero {
+                padding: 100px 20px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
+        <div class="nav-container">
+            <div class="brand">
+                <img src="logo.png" alt="Creative Digitalist Logo" class="logo">
+                <span class="brand-name">Creative Digitalist</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Products & Services</a></li>
+                    <li><a href="#projects">Projects Portfolio</a></li>
+                    <li><a href="#testimonials">Client Testimonials</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero / Intro Section -->
+    <section class="hero" id="home">
         <h1>Creative Digitalist</h1>
         <p>Exploring Art, Design, Digital Transformation & Gamified Learning</p>
-    </header>
-    <section>
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project-card">
-                <h3>Indian Art Market Research</h3>
-                <p>Market trends, digital transformation, and creative insights.</p>
-            </div>
-            <div class="project-card">
-                <h3>Daily Well-Being Tracker</h3>
-                <p>A prototype for tracking energy, mood, and focus.</p>
-            </div>
-            <div class="project-card">
-                <h3>NDNS Academy Prototype</h3>
-                <p>Gamified learning modules for creatures of Delhi.</p>
-            </div>
-        </div>
     </section>
+
+    <!-- Footer -->
     <footer>
-        <p>Contact: <a href="mailto:jha.shraddha@gmail.com">jha.shraddha@gmail.com</a> | <a href="https://www.linkedin.com/in/shraddha-jha-3339b370/"target="_blank">LinkedIn</a></p>
+        <p>Contact: 
+            <a href="mailto:jha.shraddha@gmail.com">jha.shraddha@gmail.com</a> | 
+            <a href="https://www.linkedin.com/in/shraddha-jha-3339b370/" target="_blank">LinkedIn</a>
+        </p>
     </footer>
 </body>
 </html>
