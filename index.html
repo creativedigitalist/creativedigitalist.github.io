@@ -6,11 +6,13 @@
   <title>Creative Digitalist</title>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <style>
+    /* General Styles */
     body {
       margin: 0;
       font-family: 'Pacifico', cursive;
       background-color: #ffffff;
       color: #000000;
+      scroll-behavior: smooth; /* smooth scrolling for anchors */
     }
 
     /* Header Section */
@@ -30,14 +32,14 @@
     }
 
     .logo-container img {
-      width: 120px; /* doubled size */
+      width: 120px;
       height: auto;
     }
 
     .brand-name {
       font-size: 2.8rem;
-      font-weight: 300; /* made thinner */
-      letter-spacing: 0.5px; /* slightly tighter spacing for balance */
+      font-weight: 300;
+      letter-spacing: 0.5px;
       color: #000000;
     }
 
@@ -46,7 +48,7 @@
       list-style: none;
       margin: 0;
       padding: 0;
-      gap: 45px; /* spaced out evenly for balance */
+      gap: 45px;
     }
 
     nav ul li a {
@@ -54,7 +56,7 @@
       color: #000000;
       font-weight: 400;
       font-family: 'Pacifico', cursive;
-      font-size: 1.45rem; /* slightly reduced from 1.56rem */
+      font-size: 1.45rem; /* slightly reduced for balance */
       transition: color 0.3s ease;
     }
 
@@ -69,15 +71,14 @@
       align-items: center;
       padding: 100px 20px;
       background-color: #f5f5f5;
-      font-family: 'Pacifico', cursive;
-      text-align: center; /* centers the content */
+      text-align: center;
     }
 
     #middle-section h2 {
       font-weight: 700;
       font-size: 2.5rem;
       color: #222;
-      margin: 0 0 20px 0; /* space below headline */
+      margin: 0 0 20px 0;
     }
 
     #middle-section p {
@@ -85,7 +86,63 @@
       font-size: 1.8rem;
       color: #555;
       margin: 0;
-      white-space: nowrap; /* keeps paragraph in one line */
+      white-space: nowrap;
+    }
+
+    /* About Section */
+    #about-section {
+      padding: 80px 20px;
+      background-color: #f5f5f5;
+      color: #222;
+      text-align: center;
+    }
+
+    #about-section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+    }
+
+    #about-section p {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    #about-section em {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    /* Contact Section */
+    #contact-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+    }
+
+    #contact-section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+    }
+
+    #contact-section p {
+      font-size: 1.2rem;
+      margin: 3px 0;
+    }
+
+    #contact-section a {
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    #contact-section a:hover {
+      opacity: 0.8;
     }
 
     /* Responsive adjustments */
@@ -102,27 +159,32 @@
       }
 
       #middle-section p {
-        font-size: 1.5rem; /* slightly smaller on small screens to fit */
+        font-size: 1.5rem;
+      }
+
+      #about-section p {
+        font-size: 1.2rem;
       }
     }
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="logo-container">
       <img src="logo.png" alt="Creative Digitalist Logo">
       <h1 class="brand-name">Creative Digitalist</h1>
     </div>
     <nav>
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li> <!-- Capitalized A -->
-    <li><a href="#">Services</a></li>
-    <li><a href="#">Portfolio</a></li>
-    <li><a href="#">Testimonials</a></li>
-    <li><a href="#">Blog</a></li>
-  </ul>
-</nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about-section">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Middle Section -->
@@ -133,47 +195,24 @@
     </div>
   </section>
 
-  <!-- Bottom / Contact Section -->
-  <section id="contact-section" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px 20px; background-color: #222; color: #fff; font-family: 'Pacifico', cursive; text-align: center;">
-    <h2 style="font-size: 1.6rem; margin-bottom: 15px;">Get in Touch</h2>
+  <!-- About Section -->
+  <section id="about-section">
+    <div style="max-width: 800px; margin: auto;">
+      <h2>About Creative Digitalist</h2>
+      <p><em>“If there’s a book you want to read, but it hasn’t been written yet, then you must write it.”</em> – Toni Morrison</p>
+      <p>These words resonate far beyond writing a book. They speak to creation itself: that which hasn’t yet been made but is deeply desired must be created by those who desire it.</p>
+      <p>Such were the circumstances in which <strong>Creative Digitalist</strong> was born—a professional identity not yet widely defined or recognized. After a lifetime of varied interests and interdisciplinary curiosities, I took a direction that was at once unexpected and natural: forging a career path that doesn’t quite exist… yet.</p>
+      <p>With every project and experience, the book is being written, the story is being shaped, and <strong>Creative Digitalist</strong> is steadily finding its place.</p>
+      <p>Explore my journey, projects, and experiments as this story continues to unfold.</p>
+    </div>
+  </section>
 
-    <p style="font-size: 1.2rem; margin: 3px 0;">
-      Email: <a href="mailto:jha.shraddha@gmail.com" style="color: #ff1493; text-decoration: none;">jha.shraddha@gmail.com</a>
-    </p>
-
-    <p style="font-size: 1.2rem; margin: 3px 0;">
-      LinkedIn: <a href="https://www.linkedin.com/in/shraddha-jha-3339b370/" target="_blank" style="color: #0e76a8; text-decoration: none;">linkedin.com/in/shraddha-jha-3339b370/</a>
-    </p>
-
-    <p style="font-size: 1.2rem; margin: 3px 0;">
-      Instagram: <a href="https://www.instagram.com/nomadic.experiments" target="_blank" style="color: #E1306C; text-decoration: none;">@nomadic.experiments</a>
-    </p>
+  <!-- Contact Section -->
+  <section id="contact-section">
+    <h2>Get in Touch</h2>
+    <p>Email: <a href="mailto:jha.shraddha@gmail.com" style="color: #ff1493;">jha.shraddha@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/shraddha-jha-3339b370/" target="_blank" style="color: #0e76a8;">linkedin.com/in/shraddha-jha-3339b370/</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/nomadic.experiments" target="_blank" style="color: #E1306C;">@nomadic.experiments</a></p>
   </section>
 </body>
 </html>
-<!-- About Section -->
-<section id="about-section" style="padding: 80px 20px; background-color: #f5f5f5; font-family: 'Pacifico', cursive; color: #222; text-align: center;">
-  <div style="max-width: 800px; margin: auto;">
-    <h2 style="font-size: 2.2rem; margin-bottom: 30px;">About Creative Digitalist</h2>
-    
-    <p style="font-size: 1.5rem; line-height: 1.7; margin-bottom: 20px;">
-      <em>“If there’s a book you want to read, but it hasn’t been written yet, then you must write it.”</em> – Toni Morrison
-    </p>
-    
-    <p style="font-size: 1.3rem; line-height: 1.7; margin-bottom: 20px;">
-      These words resonate far beyond writing a book. They speak to creation itself: that which hasn’t yet been made but is deeply desired must be created by those who desire it.
-    </p>
-
-    <p style="font-size: 1.3rem; line-height: 1.7; margin-bottom: 20px;">
-      Such were the circumstances in which <strong>Creative Digitalist</strong> was born—a professional identity not yet widely defined or recognized. After a lifetime of varied interests and interdisciplinary curiosities, I took a direction that was at once unexpected and natural: forging a career path that doesn’t quite exist… yet.
-    </p>
-
-    <p style="font-size: 1.3rem; line-height: 1.7; margin-bottom: 20px;">
-      With every project and experience, the book is being written, the story is being shaped, and <strong>Creative Digitalist</strong> is steadily finding its place.
-    </p>
-
-    <p style="font-size: 1.3rem; line-height: 1.7; margin-top: 30px;">
-      Explore my journey, projects, and experiments as this story continues to unfold.
-    </p>
-  </div>
-</section>
