@@ -1,140 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Digitalist</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Helvetica Neue', sans-serif;
-            background-color: #ffffff;
-            color: #000000;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Digitalist</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-        /* Header */
-        header {
-            background-color: #ffffff;
-            padding: 15px 30px;
-            border-bottom: 1px solid #ddd;
-        }
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .brand {
-            display: flex;
-            align-items: center;
-        }
-        .logo {
-            width: 50px;
-            height: auto;
-            margin-right: 10px;
-        }
-        .brand-name {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #FF69B4; /* hot pink */
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-        nav li {
-            margin-left: 25px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #FF69B4; /* hot pink */
-            font-weight: 500;
-        }
-        nav a:hover {
-            color: #FF1493; /* deeper pink on hover */
-        }
+    /* Header section */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+    }
 
-        /* Intro / Hero */
-        .hero {
-            text-align: center;
-            padding: 150px 20px;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            color: #333333;
-        }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
 
-        /* Footer */
-        footer {
-            padding: 30px 20px;
-            text-align: center;
-            color: #555555;
-            border-top: 1px solid #ddd;
-        }
-        footer a {
-            color: #000000;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        footer a:hover {
-            color: #555555;
-        }
+    .logo {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+    }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            nav ul {
-                flex-direction: column;
-                width: 100%;
-            }
-            nav li {
-                margin: 10px 0;
-            }
-            .hero {
-                padding: 100px 20px;
-            }
-        }
-    </style>
+    .brand-name {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #d60073; /* darker pink */
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      gap: 40px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #d60073;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: color 0.2s ease-in-out;
+    }
+
+    nav a:hover {
+      color: #a80055;
+    }
+
+    /* Hero section */
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      color: #444;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+      border-top: 1px solid #eee;
+      color: #555;
+    }
+
+    footer a {
+      color: #d60073;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      color: #a80055;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Header -->
-    <header>
-        <div class="nav-container">
-            <div class="brand">
-                <img src="logo.png" alt="Creative Digitalist Logo" class="logo">
-                <span class="brand-name">Creative Digitalist</span>
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Products & Services</a></li>
-                    <li><a href="#projects">Projects Portfolio</a></li>
-                    <li><a href="#testimonials">Client Testimonials</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="Creative Digitalist Logo" class="logo">
+      <span class="brand-name">Creative Digitalist</span>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products & Services</a>
+      <a href="#">Projects Portfolio</a>
+      <a href="#">Client Testimonials</a>
+    </nav>
+  </header>
 
-    <!-- Hero / Intro Section -->
-    <section class="hero" id="home">
-        <h1>Creative Digitalist</h1>
-        <p>Exploring Art, Design, Digital Transformation & Gamified Learning</p>
-    </section>
+  <section class="hero">
+    <h1>Welcome to Creative Digitalist</h1>
+    <p>Designing, analyzing, and transforming digital systems with creativity and clarity.</p>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>Contact: 
-            <a href="mailto:jha.shraddha@gmail.com">jha.shraddha@gmail.com</a> | 
-            <a href="https://www.linkedin.com/in/shraddha-jha-3339b370/" target="_blank">LinkedIn</a>
-        </p>
-    </footer>
+  <footer>
+    <p>Contact: <a href="mailto:yourname@email.com">yourname@email.com</a> | 
+    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></p>
+  </footer>
 </body>
 </html>
