@@ -35,13 +35,8 @@
 
     .brand-name {
       font-size: 2.8rem;
-      color: #000000;
+      color: #000000; /* fully black */
       letter-spacing: 1px;
-    }
-
-    .brand-name .blue {
-      color: #0033cc; /* bright dark blue */
-      font-size: 3.2rem; /* slightly larger for emphasis */
     }
 
     nav ul {
@@ -49,7 +44,7 @@
       list-style: none;
       margin: 0;
       padding: 0;
-      gap: 30px;
+      gap: 45px; /* spaced out evenly for balance */
     }
 
     nav ul li a {
@@ -74,7 +69,7 @@
       nav ul {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 25px;
+        gap: 30px;
       }
     }
   </style>
@@ -83,9 +78,7 @@
   <header>
     <div class="logo-container">
       <img src="logo.png" alt="Creative Digitalist Logo">
-      <h1 class="brand-name">
-        <span class="blue">C</span>reative <span class="blue">D</span>igitalist
-      </h1>
+      <h1 class="brand-name">Creative Digitalist</h1>
     </div>
     <nav>
       <ul>
