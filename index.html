@@ -77,6 +77,7 @@
       padding: 100px 20px;
       background-color: #f5f5f5;
       text-align: center;
+      scroll-margin-top: 100px; /* fix for sticky header offset */
     }
 
     #middle-section h2 {
@@ -118,6 +119,7 @@
       text-align: center;
       max-width: 800px;
       margin: 0 auto;
+      scroll-margin-top: 100px; /* fix for sticky header offset */
     }
 
     #about-section h2 {
@@ -163,6 +165,7 @@
       background-color: #222;
       color: #fff;
       text-align: center;
+      scroll-margin-top: 100px; /* fix for sticky header offset */
     }
 
     #contact-section h2 {
@@ -275,25 +278,4 @@
     <h2>Reach Out</h2>
     <p>Email: <a href="mailto:jha.shraddha@gmail.com" style="color: #ff1493;">jha.shraddha@gmail.com</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/shraddha-jha-3339b370/" target="_blank" style="color: #0e76a8;">linkedin.com/in/shraddha-jha-3339b370/</a></p>
-    <p>Instagram: <a href="https://www.instagram.com/nomadic.experiments" target="_blank" style="color: #E1306C;">@nomadic.experiments</a></p>
-  </section>
-
-  <!-- JS for FAQ Accordion -->
-  <script>
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    faqQuestions.forEach(q => {
-      q.addEventListener('click', () => {
-        const answer = q.nextElementSibling;
-        const plus = q.querySelector('.plus');
-        if(answer.style.display === 'block'){
-          answer.style.display = 'none';
-          plus.textContent = '+';
-        } else {
-          answer.style.display = 'block';
-          plus.textContent = '−';
-        }
-      });
-    });
-  </script>
-</body>
-</html>
+    <p>Instagram: <a href="https://www.instagram.com/nomadic.experiments" target="_blank" style="color:_
