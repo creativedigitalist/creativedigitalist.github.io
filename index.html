@@ -12,7 +12,7 @@
       font-family: 'Pacifico', cursive;
       background-color: #ffffff;
       color: #000000;
-      scroll-behavior: smooth; /* smooth scrolling for anchors */
+      scroll-behavior: smooth;
     }
 
     /* Header Section */
@@ -23,6 +23,9 @@
       padding: 20px 60px;
       background-color: #ffffff;
       border-bottom: 2px solid #f1f1f1;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .logo-container {
@@ -62,7 +65,7 @@
     }
 
     nav ul li a:hover {
-      color: #ff1493; /* hot pink hover */
+      color: #ff1493;
     }
 
     /* Middle Section */
@@ -87,23 +90,34 @@
       font-weight: 400;
       font-size: 1.8rem;
       color: #222;
-      margin: 0;
-      white-space: normal; /* allow wrapping */
+      margin: 10px 0;
+      white-space: normal;
     }
 
-    #middle-section img {
+    #middle-section a.portfolio-link {
       margin-top: 30px;
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
+      font-size: 1.6rem;
+      color: #ff1493;
+      text-decoration: none;
+      border: 2px solid #ff1493;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    /* About Section */
+    #middle-section a.portfolio-link:hover {
+      background-color: #ff1493;
+      color: #ffffff;
+    }
+
+    /* About Section - FAQ */
     #about-section {
       padding: 80px 20px;
       background-color: #f5f5f5;
       color: #222;
       text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     #about-section h2 {
@@ -111,16 +125,32 @@
       margin-bottom: 30px;
     }
 
-    #about-section p {
-      font-size: 1.3rem;
-      line-height: 1.7;
-      margin-bottom: 20px;
+    .faq-item {
+      text-align: left;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
     }
 
-    #about-section em {
+    .faq-question {
+      font-weight: bold;
       font-size: 1.5rem;
-      margin-bottom: 20px;
-      display: block;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .faq-question span.plus {
+      font-size: 1.5rem;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-answer {
+      display: none;
+      font-size: 1.3rem;
+      margin-top: 8px;
     }
 
     /* Contact Section */
@@ -172,13 +202,18 @@
         font-size: 1.5rem;
       }
 
-      #about-section p {
-        font-size: 1.2rem;
+      .faq-question {
+        font-size: 1.3rem;
+      }
+
+      .faq-answer {
+        font-size: 1.1rem;
       }
     }
   </style>
 </head>
 <body>
+
   <!-- Header -->
   <header>
     <div class="logo-container">
@@ -187,9 +222,9 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#middle-section">Home</a></li>
+        <li><a href="#about-section">About</a></li>
+        <li><a href="#contact-section">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -201,6 +236,37 @@
       <p>Data Analytics & Visualization Storytelling</p>
       <p>Project-Driven Creative Differentiation</p>
       <p>Includes Lived Experience Projects</p>
+      <a class="portfolio-link" href="portfolio.html" target="_blank">Explore My Complete Portfolio</a>
+    </div>
+  </section>
+
+  <!-- About Section (FAQ) -->
+  <section id="about-section">
+    <h2>About Me</h2>
+
+    <div class="faq-item">
+      <div class="faq-question"><span class="plus">+</span> Who am I?</div>
+      <div class="faq-answer">I am Shraddha Jha, a Creative Digitalist exploring holistic regenerative systems, analytics, and lived experience projects.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question"><span class="plus">+</span> What do I do?</div>
+      <div class="faq-answer">I combine data analytics, visualization, and storytelling with hands-on projects to generate actionable insights and creative solutions.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question"><span class="plus">+</span> Why do I do it?</div>
+      <div class="faq-answer">To bridge personal and public data, create meaningful impact, and explore innovative approaches to productivity, wellness, and sustainable living.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question"><span class="plus">+</span> How do I work?</div>
+      <div class="faq-answer">Through project-driven experimentation, lived experience analytics, and creative storytelling techniques.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question"><span class="plus">+</span> What makes me different?</div>
+      <div class="faq-answer">Project-driven creative differentiation, combining authenticity, analytics, and lived experience to stand out in the digital and creative space.</div>
     </div>
   </section>
 
@@ -211,5 +277,23 @@
     <p>LinkedIn: <a href="https://www.linkedin.com/in/shraddha-jha-3339b370/" target="_blank" style="color: #0e76a8;">linkedin.com/in/shraddha-jha-3339b370/</a></p>
     <p>Instagram: <a href="https://www.instagram.com/nomadic.experiments" target="_blank" style="color: #E1306C;">@nomadic.experiments</a></p>
   </section>
+
+  <!-- JS for FAQ Accordion -->
+  <script>
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        const plus = q.querySelector('.plus');
+        if(answer.style.display === 'block'){
+          answer.style.display = 'none';
+          plus.textContent = '+';
+        } else {
+          answer.style.display = 'block';
+          plus.textContent = '−';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
