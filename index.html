@@ -111,50 +111,6 @@
       color: #ffffff;
     }
 
-    /* About Section - FAQ */
-    #about-section {
-      padding: 80px 20px;
-      background-color: #f5f5f5;
-      color: #222;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-      scroll-margin-top: 100px; /* fix for sticky header offset */
-    }
-
-    #about-section h2 {
-      font-size: 2.2rem;
-      margin-bottom: 30px;
-    }
-
-    .faq-item {
-      text-align: left;
-      margin-bottom: 15px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 10px;
-    }
-
-    .faq-question {
-      font-weight: bold;
-      font-size: 1.5rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .faq-question span.plus {
-      font-size: 1.5rem;
-      font-weight: bold;
-      transition: transform 0.3s ease;
-    }
-
-    .faq-answer {
-      display: none;
-      font-size: 1.3rem;
-      margin-top: 8px;
-    }
-
     /* Contact Section */
     #contact-section {
       display: flex;
@@ -243,36 +199,6 @@
     </div>
   </section>
 
-  <!-- About Section (FAQ) -->
-  <section id="about-section">
-    <h2>About Me</h2>
-
-    <div class="faq-item">
-      <div class="faq-question"><span class="plus">+</span> Who am I?</div>
-      <div class="faq-answer">I am Shraddha Jha, a Creative Digitalist exploring holistic regenerative systems, analytics, and lived experience projects.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-question"><span class="plus">+</span> What do I do?</div>
-      <div class="faq-answer">I combine data analytics, visualization, and storytelling with hands-on projects to generate actionable insights and creative solutions.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-question"><span class="plus">+</span> Why do I do it?</div>
-      <div class="faq-answer">To bridge personal and public data, create meaningful impact, and explore innovative approaches to productivity, wellness, and sustainable living.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-question"><span class="plus">+</span> How do I work?</div>
-      <div class="faq-answer">Through project-driven experimentation, lived experience analytics, and creative storytelling techniques.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-question"><span class="plus">+</span> What makes me different?</div>
-      <div class="faq-answer">Project-driven creative differentiation, combining authenticity, analytics, and lived experience to stand out in the digital and creative space.</div>
-    </div>
-  </section>
-
   <!-- Contact Section -->
   <section id="contact-section">
     <h2>Reach Out</h2>
@@ -280,22 +206,4 @@
     <p>LinkedIn: <a href="https://www.linkedin.com/in/shraddha-jha-3339b370/" target="_blank" style="color: #0e76a8;">linkedin.com/in/shraddha-jha-3339b370/</a></p>
     <p>Instagram: <a href="https://www.instagram.com/nomadic.experiments" target="_blank" style="color: #E1306C;">@nomadic.exexperiments</a></p>
   </section>
-
-  <!-- JS for FAQ Accordion -->
-  <script>
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    faqQuestions.forEach(q => {
-      q.addEventListener('click', () => {
-        const answer = q.nextElementSibling;
-        const plus = q.querySelector('.plus');
-        if(answer.style.display === 'block'){
-          answer.style.display = 'none';
-          plus.textContent = '+';
-        } else {
-          answer.style.display = 'block';
-          plus.textContent = '−';
-        }
-      });
-    });
-  </script>
 </body>
